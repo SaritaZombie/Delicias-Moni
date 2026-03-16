@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias Moni</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productos.css">
+</head>
+<body>
+    <header class="">
+        <div class="row" id="encabezado">
+            <div class="col-1" id="imagenLogo">
+                <a href="index.html">
+                    <img id="logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-3">
+                <p id="DeliciasMoli">Delicias Moni</p>
+            </div>
+
+            <div class="col-4">
+                
+            </div>
+
+            <div class="col-4" id="iconos">
+                <a href="">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-cart-fill"></i>
+                </a>
+                <a href="iniciarSesion.html">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="row" id="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Postres</a></li>
+                        <li><a class="dropdown-item" href="#">Tortas</a></li>
+                        <li><a class="dropdown-item" href="#">Bebidas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Seccion de filtros -->
+        <section class="container filtros" id="filtros">
+            <div class="filtro-item">
+                <div class="dropdown">
+                    <label class="form-label">Ordenar Por:</label>
+                    <button class="btn dropdown-toggle btnOrdenar" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleccionar
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Reciente</a></li>
+                        <li><a class="dropdown-item" href="#">Destacado</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="filtro-item">
+                <label for="range4" class="form-label">Rango de precio:</label>
+                <input type="range" class="form-range" min="0" max="100" value="50" id="range4">
+                <output for="range4" id="rangeValue" aria-hidden="true"></output>
+            </div>
+            
+        </section>
+            
+
+        <section class=" container zona-productos">
+            <div class="row">
+                <div class="col">
+                    <h1>Postres</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row row-cols-2 g-3">
+                <article class="col-lg-3 col-md-2">
+                    <div class="card">
+                        <img src="img/postrefresas.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Postres 3 Leches</h5>
+                            <h5 class="card-title">$4.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-lg-3 col-md-2">
+                    <div class="card">
+                        <img src="img/napoleon4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Postre Napoleon</h5>
+                            <h5 class="card-title">$8.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="col-lg-3 col-md-2">
+                    <div class="card">
+                        <img src="img/fresas.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresas con Crema</h5>
+                            <h5 class="card-title">$12.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <section class=" container zona-productos">
+            <div class="row">
+                <div class="col">
+                    <h1>Pudines</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row row-cols-2 g-3">
+                <article class="col-md-3">
+                    <div class="card">
+                        <img src="img/postre_fresa.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Pudin de frambuesa</h5>
+                            <h5 class="card-title">$8.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-3">
+                    <div class="card">
+                        <img src="img/torta3.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Pudin Personalizado</h5>
+                            <h5 class="card-title">$40.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+
+        </section>
+
+        <section class=" container zona-productos">
+            <div class="row">
+                <div class="col">
+                    <h1>Otros</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row row-cols-2 g-3">
+                <article class="col-md-3">
+                    <div class="card">
+                        <img src="img/deditos.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Deditos de queso</h5>
+                            <h5 class="card-title">$10.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-3">
+                    <div class="card">
+                        <img src="img/image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Manzanas Caramelizadas</h5>
+                            <h5 class="card-title">$5.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-3">
+                    <div class="card">
+                        <img src="img/dona3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Palillo de Donas</h5>
+                            <h5 class="card-title">$2.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-md-3">
+                    <div class="card">
+                        <img src="img/image (1).png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Gelatinas</h5>
+                            <h5 class="card-title">$5.000</h5>
+                            <a href="#" class="btn btnComprar">Comprar</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="row" id="redesSociales">
+            <div class="col-3" id="grupo">
+                <i class="bi bi-envelope"></i>
+                <p>deliciasMoni@gmail.com</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-telephone-fill"></i>
+                <p>350-6252222</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-facebook"></i>
+                <p>Delicias Moni</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-instagram"></i>
+                <p>Delicias Moni</p>
+            </div>
+        </div>
+        <div class="row" id="pie">
+            <p>Copyright © 2026 - Delicias Moni | Diseñado por: Jean Cortina, Sara Jiménez, Ana López</p>
+        </div>
+
+    </footer>
+</body>
+</html>

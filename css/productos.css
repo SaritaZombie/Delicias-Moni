@@ -1,6 +1,5 @@
 body{
     background-color: #fff1f9;
-    padding-top: 200px;
 }
 
 .filtros{
@@ -103,8 +102,8 @@ hr{
 }
 
 #tortas, #otros, #postres{
-    padding-top: 200px;
-    margin-top: -200px;
+    padding-top: 400px;
+    margin-top: -400px;
 }
 
 @media (max-width:680px) {

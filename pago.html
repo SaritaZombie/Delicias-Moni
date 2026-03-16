@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Delicias Moni</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Concert+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pago.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="row" id="encabezado">
+
+            <div class="col-1" id="imagenLogo">
+                <a href="index.html">
+                    <img id="logo" src="img/logo.png">
+                </a>
+            </div>
+
+            <div class="col-3">
+                <p id="DeliciasMoli">Delicias Moni</p>
+            </div>
+
+            <div class="col-4"></div>
+
+            <div class="col-4" id="iconos">
+
+                <a href="">
+                    <i class="bi bi-search"></i>
+                </a>
+
+                <a href="carrito.html" id="iconoCarrito">
+                    <i class="bi bi-cart-fill"></i>
+                    <span id="contadorCarrito">0</span>
+                </a>
+
+                <a href="iniciarSesion.html">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="row" id="nav">
+            <ul class="nav justify-content-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Productos
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Postres</a></li>
+                        <li><a class="dropdown-item" href="#">Tortas</a></li>
+                        <li><a class="dropdown-item" href="#">Bebidas</a></li>
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </header>
+
+    <div class="container-fluid" id="tituloPago">
+
+        <a href="carrito.html" class="btnVolver">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+
+        <p>
+            <span class="pasoInactivo">Carrito</span>
+            <span class="pasoActivo">→ Pago</span>
+            <span class="pasoInactivo">→ Pedido completado</span>
+        </p>
+
+    </div>
+
+    <div class="container-fluid" id="pagoContainer">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h4 class="tituloSeccion">Detalles de Compra</h4>
+
+                <input id="nombre" class="inputPago" placeholder="Nombre(s)">
+                <input id="apellido" class="inputPago" placeholder="Apellidos">
+                <input id="email" class="inputPago" placeholder="Email">
+                <input id="whatsapp" class="inputPago" placeholder="Número de WhatsApp">
+                <input id="direccion" class="inputPago" placeholder="Dirección">
+
+                <textarea id="notas" class="textareaPago" placeholder="Notas del pedido (Opcional)"></textarea>
+
+                <h4 class="tituloSeccion mt-4">Información adicional</h4>
+
+                <textarea class="textareaPago" placeholder="Notas del pedido (Opcional)"></textarea>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h4 class="tituloSeccion text-center">Tu pedido</h4>
+
+                <div class="cardPedido">
+
+                    <div class="filaPedido">
+                        <span>Producto</span>
+                        <span>Sub total</span>
+                    </div>
+
+                    <hr>
+
+                    <div id="listaPedido"></div>
+
+                    <hr>
+
+                    <div class="totalPedido">
+                        Total <span id="totalPedido">$0</span>
+                    </div>
+
+                </div>
+
+                <div class="medioPago mt-3">
+                    <h5>Medio de Pago</h5>
+
+                    <label><input type="radio" name="pago"> Nequi</label>
+                    <label><input type="radio" name="pago"> Bancolombia</label>
+                    <label><input type="radio" name="pago"> Daviplata</label>
+
+                    <p id="mensajeErrorPago" class="mensajeErrorPago"></p>
+
+                </div>
+
+                <div class="text-center mt-3">
+                    <button class="btnRealizar">Realizar Pedido</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/carritoGlobal.js"></script>
+    <script src="js/pago.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<footer>
+
+    <div class="row" id="redesSociales">
+        <div class="col-3" id="grupo"><i class="bi bi-envelope"></i>
+            <p>deliciasMoni@gmail.com</p>
+        </div>
+        <div class="col-3" id="grupo"><i class="bi bi-telephone-fill"></i>
+            <p>350-6252222</p>
+        </div>
+        <div class="col-3" id="grupo"><i class="bi bi-facebook"></i>
+            <p>Delicias Moni</p>
+        </div>
+        <div class="col-3" id="grupo"><i class="bi bi-instagram"></i>
+            <p>Delicias Moni</p>
+        </div>
+    </div>
+
+    <div class="row" id="pie">
+        <p>Copyright © 2026 - Delicias Moni</p>
+    </div>
+
+</footer>
+
+</html>

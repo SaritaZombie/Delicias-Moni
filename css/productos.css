@@ -2,10 +2,6 @@ body{
     background-color: #fff1f9;
 }
 
-html{
-    scroll-padding-top: 200px;
-}
-
 .filtros{
     display: flex;
     align-items: center;
@@ -105,6 +101,10 @@ hr{
     background-color: #44002b;
 }
 
+#tortas, #otros, #postres{
+    padding-top: 200px;
+    margin-top: -200px;
+}
 
 @media (max-width:680px) {
  

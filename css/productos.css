@@ -102,6 +102,10 @@ hr{
     background-color: #44002b;
 }
 
+#postres, #tortas, #otros{
+    scroll-margin-top: 80px;
+}
+
 
 @media (max-width:680px) {
  

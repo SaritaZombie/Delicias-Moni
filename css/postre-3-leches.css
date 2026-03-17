@@ -2,6 +2,7 @@ body{
     background-color: #fff1f9;
 }
 
+/*Imagen (Carousel) del producto*/
 .productoInfo{
     padding: 30px 120px;
     margin: auto;
@@ -18,7 +19,7 @@ body{
     object-position: center;
 }
 
-
+/*Boton volver*/
 .btnVolver {
     display: inline-flex;
     align-items: center;
@@ -38,7 +39,7 @@ body{
     color: #fff;
 }
 
-
+/*Informacion del producto*/
 .productoCompra{
     border-radius: 30px;
     padding: 20px;
@@ -120,6 +121,8 @@ body{
     background-color: #9c0d68;
     color: #fff;
 }
+
+/*Zona de reseñas y comentarios*/
 
 .comentarios{
     border-radius: 30px;

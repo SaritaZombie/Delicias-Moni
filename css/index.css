@@ -5,6 +5,11 @@
     object-fit: cover; /*Corta la imagen sin extirarla*/
 }
 
+#banner{
+    height: 500px;
+    object-fit: contain;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
     background-color: #ff4abb;

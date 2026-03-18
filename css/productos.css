@@ -102,8 +102,8 @@ hr{
 }
 
 #tortas, #otros, #postres{
-    padding-top: 300px;
-    margin-top: -300px;
+    padding-top: 200px;
+    margin-top: -200px;
 }
 
 @media (max-width:680px) {

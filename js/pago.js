@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("pedidoInfo", JSON.stringify(pedido));
         localStorage.removeItem("carrito");
 
-        window.location.href = "pedidoCompletado.html";
+        window.location.href = "pedidocompletado.html";
 
     });
 

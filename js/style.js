@@ -16,7 +16,7 @@ const productos = [
     },
     {
         nombre: "Manzanas Caramelizadas",
-        img: "img/image.png",
+        img: "img/image.jpg",
         link: "#"
     },
     {

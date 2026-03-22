@@ -72,3 +72,9 @@ body {
     border-color: #f7029c;
     box-shadow: none;
 }
+
+#mensajeExito {
+    display:none; 
+    color:green;
+    text-align: center;
+}

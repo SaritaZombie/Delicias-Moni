@@ -125,32 +125,6 @@ header{
     margin: 0;
 }
 
-
-#iconoCarrito{
-position:relative;
-font-size:28px;
-color:#c00079;
-text-decoration:none;
-}
-
-#contadorCarrito{
-position:absolute;
-top:-8px;
-right:-12px;
-background:#ea67b8;
-color:white;
-font-family:'Chewy', system-ui;
-font-size:16px;
-width:26px;
-height:26px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-border:3px solid white;
-box-shadow:0 2px 6px rgba(0,0,0,0.15);
-}
-
 /*Lupa*/
 .contenedor-busqueda {
     position: relative;
@@ -198,4 +172,32 @@ box-shadow:0 2px 6px rgba(0,0,0,0.15);
 .oculto {
     display: none;
 }
+
+/*carrito*/
+#iconoCarrito{
+position:relative;
+font-size:28px;
+color:#c00079;
+text-decoration:none;
+}
+
+#contadorCarrito{
+position:absolute;
+top:-8px;
+right:-12px;
+background:#ea67b8;
+color:white;
+font-family:'Chewy', system-ui;
+font-size:16px;
+width:26px;
+height:26px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+border:3px solid white;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+
 

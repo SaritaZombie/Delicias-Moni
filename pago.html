@@ -32,23 +32,27 @@
                 <p id="DeliciasMoli">Delicias Moni</p>
             </div>
 
-            <div class="col-4"></div>
+            <div class="col-8" id="iconos">
+                
+                <div class="contenedor-busqueda">
 
-            <div class="col-4" id="iconos">
+                    <input type="text" id="buscador" placeholder="Ingrese algún producto" class="oculto">
 
-                <a href="">
-                    <i class="bi bi-search"></i>
-                </a>
+                    <a href="#" id="btnBuscar">
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <div id="resultados" class="resultados oculto"></div>
+
+                </div>
 
                 <a href="carrito.html" id="iconoCarrito">
                     <i class="bi bi-cart-fill"></i>
                     <span id="contadorCarrito">0</span>
                 </a>
-
                 <a href="iniciarSesion.html">
                     <i class="bi bi-person-circle"></i>
                 </a>
-
             </div>
         </div>
 
@@ -162,6 +166,7 @@
             </div>
         </div>
 
+        <script src="js/style.js"></script>
         <script src="js/carritoGlobal.js"></script>
         <script src="js/pago.js"></script>
 

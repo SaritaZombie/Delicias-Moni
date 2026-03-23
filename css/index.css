@@ -77,14 +77,14 @@
     margin: 20px;
 }
 
-#promocionProducto .btn, .btn-carrusel{
+#promocionProducto .btn, .btn-carrusel, .btn-carrusel2{
     background-color: #f7029c;
     border: 5px solid white;
     margin-bottom: 10px;
     border-radius: 20px;
 }
 
-#promocionProducto .btn:hover, .btn-carrusel:hover{
+#promocionProducto .btn:hover, .btn-carrusel:hover,.btn-carrusel2:hover{
     background-color: white;
     color: #f7029c;
     border-color: #f7029c;

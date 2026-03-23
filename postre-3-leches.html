@@ -132,9 +132,9 @@
 
                     <label class="lbCantidad">Cantidad</label>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btnMas"><i class="bi bi-plus"></i></button>
-                        <input type="number" class="numeroCantidad"></input>
-                        <button type="button" class="btn btnMenos"><i class="bi bi-dash"></i></button>
+                        <button type="button" id="btnMenos" class="btn btnMenos"><i class="bi bi-dash"></i></button>
+                        <input type="text" id="inputNumero" class="numeroCantidad"></input>
+                        <button type="button" id="btnMas" class="btn btnMas"><i class="bi bi-plus"></i></button>
                     </div>
                     <br>
                     <a href="iniciarSesion.html" class="btn btnComprar">
@@ -145,7 +145,7 @@
             </div>
         </div>
 
-
+        <!-- Comentarios y Reseñas -->
         <div class="container comentarios">
             <div class="row">
                 <div class="col">
@@ -160,7 +160,33 @@
 
                 </div>
                 <div class="col">
-                    <a href="iniciarSesion.html" class="btn btnComprar">
+
+                    <form class="container formComentario" id="editarComentario">
+                        <label>Calificación: </label>
+                        <div class="star-group" id="starGroup">
+                            <input type="radio" name="rating" id="s5" value="5">
+                            <label for="s5"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="rating" id="s4" value="4">
+                            <label for="s4"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="rating" id="s3" value="3">
+                            <label for="s3"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="rating" id="s2" value="2">
+                            <label for="s2"><i class="bi bi-star-fill"></i></label>
+                            <input type="radio" name="rating" id="s1" value="1">
+                            <label for="s1"><i class="bi bi-star-fill"></i></label>
+                        </div>
+                        <small class="text-muted" id="ratingLabel">Selecciona una calificación</small>
+
+                        <label>Titulo: </label>
+                        <input type="text" maxlength="50" id="titulo" placeholder="Maximo 50 caracteres">
+
+                        <label>Descripción: </label>
+                        <textarea maxlength="200" placeholder="Maximo 200 caracteres"></textarea>
+
+                        <button type="submit" class="btn" id="publicarReseña" >Dejar Reseña</button>
+                    </form>
+
+                    <a href="#" id="dejarComentario" class="btn btnComprar">
                       Dejar un Comentario
                     </a>
                 </div>
@@ -245,5 +271,8 @@
         </div>
 
     </footer>
+
+    <script src="js/agregarCarrito.js"></script>
+
 </body>
 </html>

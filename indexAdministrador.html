@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias Moni</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleAdministrador.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="">
+        <div class="row" id="encabezado">
+            <div class="col-1" id="imagenLogo">
+                <a href="indexAdministrador.html">
+                    <img id="logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-3">
+                <p id="DeliciasMoli">Delicias Moni</p>
+            </div>
+
+            <div class="col-8" id="iconos">
+                
+                <div class="contenedor-busqueda">
+
+                    <input type="text" id="buscador" placeholder="Ingrese algún producto" class="oculto">
+
+                    <a href="#" id="btnBuscar">
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <div id="resultados" class="resultados oculto"></div>
+
+                </div>
+
+                <a href="#" id="iconoCarrito">
+                    <i class="bi bi-cart-fill"></i>
+                    <span id="contadorCarrito">0</span>
+                </a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                    <ul class="dropdown-menu" id="cliente">
+                        <li><a class="dropdown-item" id="clienteOpcion" href="index.html">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="row" id="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="indexAdministrador.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotrosAdministrador.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Postres</a></li>
+                        <li><a class="dropdown-item" href="#">Tortas</a></li>
+                        <li><a class="dropdown-item" href="#">Otros</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Estadísticas</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Carrusel -->
+    <div class="container">
+        <div class="row">
+            <div id="carouselExampleIndicators" class="carousel slide">
+
+                <!-- Indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                </div>
+
+                <br>
+                <!-- Imágenes -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active position-relative producto">
+                        <button class="btn btn-carrusel2 btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                        <input type="file" class="input-img" style="display:none" accept="image/*">
+                        <button class="btn btn-carrusel2 btn-secondary btn-sm cambiar-link">Cambiar Link</button>
+                        <img src="img/banner (2).png" class="d-block w-100">
+                        <a href="postre-3-leches.html" class="btn btn-primary btn-lg btn-carrusel">
+                            Ver Producto
+                        </a>
+                    </div>
+                    <div class="carousel-item producto">
+                        <button class="btn btn-carrusel2 btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                        <input type="file" class="input-img" style="display:none" accept="image/*">
+                        <button class="btn btn-carrusel2 btn-secondary btn-sm cambiar-link">Cambiar Link</button>
+                        <img src="img/banner2.png" class="d-block w-100">
+                        <a href="#" class="btn btn-primary btn-lg btn-carrusel">
+                            Ver Producto
+                        </a>
+                    </div>
+                    <div class="carousel-item producto">
+                        <button class="btn btn-carrusel2 btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                        <input type="file" class="input-img" style="display:none" accept="image/*">
+                        <button class="btn btn-carrusel2 btn-secondary btn-sm cambiar-link">Cambiar Link</button>
+                        <img src="img/banner3.png" class="d-block w-100">
+                        <a href="#" class="btn btn-primary btn-lg btn-carrusel">
+                            Ver Producto
+                        </a>
+                    </div>
+                </div>
+                <br>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Promociones -->
+    <div class="container-fluid" id="promocionesContainer">
+        <p id="promocionesP">
+            Promociones del Mes
+        </p>
+        <div class="row" id="promociones">
+            <div class="col producto" id="promocionProducto">
+                <img src="img/fresas.jpg" alt="">
+                <button type="button" class="btn btn-primary btn-lg">Ver Producto</button>
+                <!-- BOTONES ADMIN -->
+                <div class="admin-controls">
+                    <button class="btn btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                    <input type="file" class="input-img" style="display:none" accept="image/*">
+                    <button class="btn btn-secondary btn-sm cambiar-link">Cambiar Link</button>
+                </div>
+            </div>
+            <div class="col producto" id="promocionProducto">
+                <img src="img/postrefresas.jpg" alt="">
+                <a href="postre-3-leches.html"><button type="button" class="btn btn-primary btn-lg">Ver Producto</button></a>
+                <!-- BOTONES ADMIN -->
+                <div class="admin-controls">
+                    <button class="btn btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                    <input type="file" class="input-img" style="display:none" accept="image/*">
+                    <button class="btn btn-secondary btn-sm cambiar-link">Cambiar Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Productos Destacados -->
+    <div class="container-fluid" id="destacadosContainer">
+        <p id="destacadosP">
+            🍰 Productos Destacados 🍰
+        </p>
+        <div class="row" id="destacados">
+            <div class="col  producto" id="destacadoProducto">
+                <img src="img/deditos.png" alt="">
+                <div class="info">
+                    <p class="producto-nombre">Bandeja de Deditos</p>
+                    <button type="button" class="btn btn-primary btn-lg">Ver Producto</button>
+                    <br><br>
+                    <!-- BOTONES ADMIN -->
+                    <div class="admin-controls">
+                        <button class="btn btn-secondary btn-sm btn-cambiar-nombre">Cambiar Nombre</button>
+                        <button class="btn btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                        <input type="file" class="input-img" style="display:none" accept="image/*">
+                        <br><br>
+                        <button class="btn btn-secondary btn-sm btn-cambiar-link">Cambiar Link</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col  producto" id="destacadoProducto">
+                <img src="img/PalillosdeDonas.png" alt="">
+                <div class="info">
+                    <p class="producto-nombre">Palillos de Donas</p>
+                    <button type="button" class="btn btn-primary btn-lg">Ver Producto</button>
+                    <br><br>
+                    <!-- BOTONES ADMIN -->
+                    <div class="admin-controls">
+                        <button class="btn btn-secondary btn-sm btn-cambiar-nombre">Cambiar Nombre</button>
+                        <button class="btn btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                        <input type="file" class="input-img" style="display:none" accept="image/*">
+                        <br><br>
+                        <button class="btn btn-secondary btn-sm btn-cambiar-link">Cambiar Link</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col producto" id="destacadoProducto">
+                <img src="img/TresLeches.png" alt="">
+                <div class="info">
+                    <p class="producto-nombre">Postre Tres Leches</p>
+                    <button type="button" class="btn btn-primary btn-lg">Ver Producto</button>
+                    <br><br>
+                    <!-- BOTONES ADMIN -->
+                    <div class="admin-controls">
+                        <button class="btn btn-secondary btn-sm btn-cambiar-nombre">Cambiar Nombre</button>
+                        <button class="btn btn-secondary btn-sm btn-cambiar-img">Cambiar Imagen</button>
+                        <input type="file" class="input-img" style="display:none" accept="image/*">
+                        <br><br>
+                        <button class="btn btn-secondary btn-sm btn-cambiar-link">Cambiar Link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/style.js"></script>
+    <script src="js/indexAdministrador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<footer>
+    <div class="row" id="redesSociales">
+        <div class="col-3" id="grupo">
+            <i class="bi bi-envelope"></i>
+            <p>deliciasMoni@gmail.com</p>
+        </div>
+        <div class="col-3" id="grupo">
+            <i class="bi bi-telephone-fill"></i>
+            <p>350-6252222</p>
+        </div>
+        <div class="col-3" id="grupo">
+            <i class="bi bi-facebook"></i>
+            <p>Delicias Moni</p>
+        </div>
+        <div class="col-3" id="grupo">
+            <i class="bi bi-instagram"></i>
+            <p>Delicias Moni</p>
+        </div>
+    </div>
+    <div class="row" id="pie">
+        <p>Copyright © 2026 - Delicias Moni | Diseñado por: Jean Cortina, Sara Jiménez, Ana López</p>
+    </div>
+
+</footer>
+
+</html>

@@ -35,7 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Producto actualizado 💕");
 
         window.location.href = "productosadmin.html";
+    });
 
+    // ELIMINAR PRODUCTO (AQUÍ VA)
+    document.getElementById("btnEliminarProducto").addEventListener("click", () => {
+
+        let confirmar = confirm("¿Seguro que quieres eliminar este producto?");
+        if (!confirmar) return;
+
+        let nuevosProductos = productos.filter(p => p.id != id);
+
+        localStorage.setItem("productos", JSON.stringify(nuevosProductos));
+
+        alert("Producto eliminado ❌");
+
+        window.location.href = "productosadmin.html";
     });
 
 });

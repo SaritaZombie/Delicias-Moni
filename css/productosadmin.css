@@ -20,6 +20,11 @@ body {
     gap: 10px;
 }
 
+.filtro-item output{
+    font-family: "Chewy", system-ui;
+    font-size: 20px;
+}
+
 .form-label {
     font-family: "Chewy", system-ui;
     font-size: large;

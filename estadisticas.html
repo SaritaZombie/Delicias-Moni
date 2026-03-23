@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias Moni</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estadisticas.css">
+</head>
+<body>
+    <header class="">
+        <div class="row" id="encabezado">
+            <div class="col-1" id="imagenLogo">
+                <a href="index.html">
+                    <img id="logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-3">
+                <p id="DeliciasMoli">Delicias Moni</p>
+            </div>
+
+            <div class="col-4">
+                
+            </div>
+
+            <div class="col-4" id="iconos">
+                <a href="">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="">
+                    <i class="bi bi-cart-fill"></i>
+                </a>
+                <a href="iniciarSesion.html">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="row" id="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="productos.html#postres">Postres</a></li>
+                        <li><a class="dropdown-item" href="productos.html#tortas">Tortas</a></li>
+                        <li><a class="dropdown-item" href="productos.html#otros">Otros</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    
+    <!-- Estadisticas -->
+    <main>
+        <section class="container stats1">
+            <h1>Estadistica del Dia</h1>
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <h2>Ventas por Dia</h2>
+                    <div class="graficaVenta">
+                        <canvas id="ventasXDia"></canvas>
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-md-4">
+                    <h2>Cantidad de ventas de hoy: </h2>
+                    <p id="ventasHoy">Ventas: 0</p>
+                    <h2>Ganancias hoy: </h2>
+                    <p>$350.000</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h1>Ventas por productos del mes</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="mesBotones">
+                        <button class="btn btn-primary"><i class="bi bi-chevron-left"></i></button>
+                        <h2>Marzo 2026</h2>
+                        <button class="btn btn-primary"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    
+                    <div class="graficaProd">
+                        <canvas id="ventaXProd"></canvas>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    <h2>Productos mas vendidos</h2>
+                    
+                    <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="img/postre_fresa.jpeg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Postres 3 Leches</h5>
+                            <p class="card-text">Ventas: 58</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="img/fresas.jpg" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Fresas con Crema</h5>
+                            <p class="card-text">Ventas: 36</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                    <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <img src="img/deditos.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Deditos</h5>
+                            <p class="card-text">Ventas: 30</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="row" id="redesSociales">
+            <div class="col-3" id="grupo">
+                <i class="bi bi-envelope"></i>
+                <p>deliciasMoni@gmail.com</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-telephone-fill"></i>
+                <p>350-6252222</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-facebook"></i>
+                <p>Delicias Moni</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-instagram"></i>
+                <p>Delicias Moni</p>
+            </div>
+        </div>
+        <div class="row" id="pie">
+            <p>Copyright © 2026 - Delicias Moni | Diseñado por: Jean Cortina, Sara Jiménez, Ana López</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/estadistica.js"></script>
+
+</body>
+</html>

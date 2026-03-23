@@ -19,7 +19,7 @@ btnMas.addEventListener("click", () =>{
 })
 
 btnMenos.addEventListener("click", () =>{
-    if(cantidad > 0){
+    if(cantidad > 1){
         cantidad--;
         inputNumero.value = cantidad;
     }
@@ -43,3 +43,4 @@ document.querySelectorAll('#starGroup input').forEach(input => {
     ratingLabel.textContent = labels[parseInt(input.value) - 1] + ` (${input.value}/5)`;
   });
 });
+

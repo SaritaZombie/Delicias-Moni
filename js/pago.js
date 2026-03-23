@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ===== MOSTRAR PEDIDO =====
     let lista = document.getElementById("listaPedido");
     let totalTxt = document.getElementById("totalPedido");
 
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
     let total = 0;
 
-    if (carrito.length == 0) {
+    lista.innerHTML = "";
+
+    if (carrito.length === 0) {
         lista.innerHTML = "<p>Tu carrito está vacío</p>";
     } else {
 
@@ -18,17 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
             total += subtotal;
 
             lista.innerHTML += `
-            <div class="filaPedidoProducto">
-                <span>${p.nombre} x${p.cantidad}</span>
-                <span>$${subtotal}</span>
-            </div>
+                <div class="filaPedidoProducto">
+                    <span>${p.nombre} x${p.cantidad}</span>
+                    <span>$${subtotal}</span>
+                </div>
             `;
         });
-
     }
 
     totalTxt.textContent = "$" + total;
-
 
     // ===== BOTON PAGAR =====
     let btn = document.querySelector(".btnRealizar");
@@ -46,25 +44,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("mensajeErrorPago").style.display = "none";
 
-        let pedido = {
+        // OBTENER PEDIDOS EXISTENTES
+        let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
 
-            nombre: document.getElementById("nombre").value,
-            apellido: document.getElementById("apellido").value,
+        // CREAR NUEVO PEDIDO
+        let nuevoPedido = {
+            id: pedidos.length + 1,
+
+            cliente: document.getElementById("nombre").value + " " + document.getElementById("apellido").value,
+            contacto: document.getElementById("whatsapp").value,
             email: document.getElementById("email").value,
-            whatsapp: document.getElementById("whatsapp").value,
             direccion: document.getElementById("direccion").value,
             notas: document.getElementById("notas").value,
 
             metodo: metodo.parentElement.textContent.trim(),
-            total: totalTxt.textContent,
 
-            numeroPedido: "DM" + Math.floor(Math.random() * 10000)
+            productos: carrito,
+            total: total,
 
+            estado: "pendiente",
+            fecha: new Date().toLocaleDateString()
         };
 
-        localStorage.setItem("pedidoInfo", JSON.stringify(pedido));
+        // AGREGAR A LISTA DE PEDIDOS
+        pedidos.push(nuevoPedido);
+
+        // GUARDAR
+        localStorage.setItem("pedidos", JSON.stringify(pedidos));
+
+        // LIMPIAR CARRITO
         localStorage.removeItem("carrito");
 
+        // REDIRIGIR
         window.location.href = "final.html";
 
     });

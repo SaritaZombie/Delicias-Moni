@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Admin - Delicias Moni</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Concert+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productosadmin.css">
+</head>
+
+<body>
+
+    <header class="">
+        <div class="row" id="encabezado">
+            <div class="col-1" id="imagenLogo">
+                <a href="index.html">
+                    <img id="logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="col-3">
+                <p id="DeliciasMoli">Delicias Moni</p>
+            </div>
+
+            <div class="col-8" id="iconos">
+
+                <div class="contenedor-busqueda">
+
+                    <input type="text" id="buscador" placeholder="Ingrese algún producto" class="oculto">
+
+                    <a href="#" id="btnBuscar">
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <div id="resultados" class="resultados oculto"></div>
+
+                </div>
+
+                <a href="carrito.html" id="iconoCarrito">
+                    <i class="bi bi-cart-fill"></i>
+                    <span id="contadorCarrito">0</span>
+                </a>
+                <a href="iniciarSesion.html">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="row" id="nav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Productos</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="productosadmin.html#postres">Postres</a></li>
+                        <li><a class="dropdown-item" href="productosadmin.html#tortas">Tortas</a></li>
+                        <li><a class="dropdown-item" href="productosadmin.html#otros">Otros</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="pedidosadmin.html">Pedidos</a></li>
+                <li class="nav-item"><a class="nav-link" href="estadisticas.html">Estadísticas</a></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- FILTROS (SIN CAMBIOS) -->
+        <section class="container filtros">
+
+            <div class="filtro-item">
+                <label class="form-label">Ordenar Por:</label>
+                <button class="btn dropdown-toggle btnOrdenar" data-bs-toggle="dropdown">
+                    Seleccionar
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Reciente</a></li>
+                    <li><a class="dropdown-item" href="#">Destacado</a></li>
+                </ul>
+            </div>
+
+            <div class="filtro-item">
+                <label class="form-label">Rango de precio:</label>
+                <input type="range" class="form-range">
+            </div>
+
+        </section>
+
+        <!-- POSTRES -->
+        <section id="postres" class="container zona-productos">
+    <h1>
+        <span class="tituloSeccion">Postres</span>
+        <button class="btnLapiz">
+            <i class="bi bi-pencil-fill"></i>
+        </button>
+    </h1>
+    <hr>
+    <div class="row" id="listaPostres"></div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/postrefresas.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Postres 3 Leches</h5>
+                        <h5>$4.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/napoleon4.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Postre Napoleon</h5>
+                        <h5>$8.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- TORTAS -->
+        <section id="tortas" class="container zona-productos">
+    <h1>
+        <span class="tituloSeccion">Tortas</span>
+        <button class="btnLapiz">
+            <i class="bi bi-pencil-fill"></i>
+        </button>
+    </h1>
+    <hr>
+    <div class="row" id="listaTortas"></div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="img/postre_fresa.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Pudin de frambuesa</h5>
+                        <h5>$8.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- OTROS -->
+        <section id="otros" class="container zona-productos">
+    <h1>
+        <span class="tituloSeccion">Otros</span>
+        <button class="btnLapiz">
+            <i class="bi bi-pencil-fill"></i>
+        </button>
+    </h1>
+    <hr>
+    <div class="row" id="listaOtros"></div>
+            <article class="col-md-3">
+                <div class="card">
+                    <img src="img/deditos.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Deditos de queso</h5>
+                        <h5 class="card-title">$10.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-3">
+                <div class="card">
+                    <img src="img/image.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Manzanas Caramelizadas</h5>
+                        <h5 class="card-title">$5.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-3">
+                <div class="card">
+                    <img src="img/dona3.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Palillo de Donas</h5>
+                        <h5 class="card-title">$2.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-3">
+                <div class="card">
+                    <img src="img/image (1).png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Gelatinas</h5>
+                        <h5 class="card-title">$5.000</h5>
+                        <button class="btn btnComprar btnEditar">Editar</button>
+                    </div>
+                </div>
+            </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="row" id="redesSociales">
+            <div class="col-3" id="grupo">
+                <i class="bi bi-envelope"></i>
+                <p>deliciasMoni@gmail.com</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-telephone-fill"></i>
+                <p>350-6252222</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-facebook"></i>
+                <p>Delicias Moni</p>
+            </div>
+            <div class="col-3" id="grupo">
+                <i class="bi bi-instagram"></i>
+                <p>Delicias Moni</p>
+            </div>
+        </div>
+        <div class="row" id="pie">
+            <p>Copyright © 2026 - Delicias Moni | Diseñado por: Jean Cortina, Sara Jiménez, Ana López</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/productosadmin.js"></script>
+
+
+    <a href="nuevoProducto.html" class="btnAgregar">
+        <i class="bi bi-plus"></i>
+    </a>
+
+</body>
+
+</html>

@@ -289,6 +289,10 @@ body{
     font-size: 14px;
 }
 
+.i-gris{
+    color: #aaa;
+}
+
 .comentario-fecha {
     margin-left: auto;    
     color: #aaa;

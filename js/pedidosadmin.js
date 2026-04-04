@@ -1,5 +1,13 @@
 const lista = document.getElementById("listaPedidos");
 
+// CREAR DATOS SI NO EXISTEN
+if (!localStorage.getItem("pedidos")) {
+    localStorage.setItem("pedidos", JSON.stringify([
+        { id: 1, cliente: "Ana López", total: 25000, estado: "pendiente" },
+        { id: 2, cliente: "Juan Pérez", total: 40000, estado: "proceso" }
+    ]));
+}
+
 // TRAER PEDIDOS
 let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
 
@@ -8,7 +16,6 @@ function mostrarPedidos() {
 
     lista.innerHTML = "";
 
-    // SI NO HAY PEDIDOS
     if (pedidos.length === 0) {
         lista.innerHTML = `
             <p style="text-align:center; color:#888; margin:30px;">
@@ -28,18 +35,13 @@ function mostrarPedidos() {
                     <span class="estado ${p.estado}">
                         ${formatearEstado(p.estado)}
                     </span>
-
-                    <a href="detallepedido.html?id=${p.id}" class="btn-ver">  Ver más </a>
-
+                    <a href="detallepedido.html?id=${p.id}" class="btn-ver">Ver más</a>
                 </div>
             </div>
         `;
     });
 }
 
-
-
-//  FORMATEAR ESTADO
 function formatearEstado(estado) {
     if (estado === "pendiente") return "Pendiente";
     if (estado === "entregado") return "Entregado";
@@ -47,5 +49,4 @@ function formatearEstado(estado) {
     return estado;
 }
 
-// EJECUTAR
 mostrarPedidos();

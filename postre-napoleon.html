@@ -146,7 +146,7 @@
         </div>
 
         <!-- Comentarios y Reseñas -->
-        <div class="container comentarios">
+        <div class="container comentarios" data-producto="postre-napoleon">
             <div class="row">
                 <div class="col">
                     <h1>Reseñas y Comentarios</h1>
@@ -181,7 +181,7 @@
                         <input type="text" maxlength="50" id="titulo" placeholder="Maximo 50 caracteres">
 
                         <label>Descripción: </label>
-                        <textarea maxlength="200" placeholder="Maximo 200 caracteres"></textarea>
+                        <textarea maxlength="200" id="descripcion" placeholder="Maximo 200 caracteres"></textarea>
 
                         <button type="submit" class="btn" id="publicarReseña" >Dejar Reseña</button>
                     </form>
@@ -201,7 +201,7 @@
 
 
 
-            <div class="row mt-4">
+            <div class="row mt-4" id="listaComentarios">
                 <!-- Comentario 1 -->
                 <div class="col-12 comentario-card">
                     <div class="comentario-header">
@@ -258,6 +258,7 @@
     </footer>
 
     <script src="js/agregarCarrito.js"></script>
+    <script src="js/comentarios.js"></script>
 
 </body>
 </html>

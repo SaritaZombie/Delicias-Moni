@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <button class="btn btnComprar btnEditar" onclick="editarProducto(${p.id})">
                         Editar
                     </button>
+                    <button class="btn btnComprar" onclick="verProducto(${p.id})">
+                        Ver
+                    </button>
                 </div>
             </div>
         </div>
@@ -70,6 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // REDIRECCIÓN EDITAR PRODUCTO
 function editarProducto(id){
     window.location.href = `editarproducto.html?id=${id}`;
+}
+
+// REDIRECCIÓN VER PRODUCTO
+function verProducto(id) {
+    window.location.href = `producto-detalle.html?id=${id}`;
 }
 
 // PARTE DEL FILTRO DE VALOR

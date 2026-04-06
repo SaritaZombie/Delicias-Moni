@@ -1,5 +1,6 @@
 //LocalStogare
-const STORAGE_KEY = 'resenas_producto';
+const contenedor = document.querySelector('.comentarios')
+const STORAGE_KEY = 'resenas_'+contenedor.dataset.producto;
 
 //------- Utilidades -----------
 

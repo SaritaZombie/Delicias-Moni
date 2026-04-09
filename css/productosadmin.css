@@ -13,6 +13,24 @@ body {
     padding: 10px;
 }
 
+
+.btnEliminarCat {
+    background-color: #ff4d6d;
+    border: none;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnEliminarCat:hover {
+    background-color: #a0002b;
+    transform: scale(1.1);
+}
+
 .filtro-item {
     display: flex;
     align-items: center;
@@ -20,7 +38,7 @@ body {
     gap: 10px;
 }
 
-.filtro-item output{
+.filtro-item output {
     font-family: "Chewy", system-ui;
     font-size: 20px;
 }
@@ -149,10 +167,10 @@ hr {
     }
 
 
-    
+
 }
 
-.btnLapiz{
+.btnLapiz {
     background-color: #ffb3e6 !important;
     border: none !important;
     border-radius: 50% !important;
@@ -164,22 +182,22 @@ hr {
     color: #9c0063 !important;
     margin-left: 10px;
     cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
-.btnLapiz:hover{
+.btnLapiz:hover {
     background-color: #f7029c !important;
     color: white !important;
     transform: scale(1.1);
 }
 
-.btnLapiz i{
+.btnLapiz i {
     font-size: 16px;
 }
 
 /* BOTÓN FLOTANTE */
-.btnAgregar{
+.btnAgregar {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -193,13 +211,13 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 1000;
 }
 
-.btnAgregar:hover{
+.btnAgregar:hover {
     background-color: #9c0063;
     transform: scale(1.1);
 }

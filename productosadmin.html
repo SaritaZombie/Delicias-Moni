@@ -60,7 +60,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Productos</a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" id="menuCategorias">
                         <li><a class="dropdown-item" href="productosadmin.html#postres">Postres</a></li>
                         <li><a class="dropdown-item" href="productosadmin.html#tortas">Tortas</a></li>
                         <li><a class="dropdown-item" href="productosadmin.html#otros">Otros</a></li>
@@ -102,14 +102,14 @@
 
         <!-- POSTRES -->
         <section id="postres" class="container zona-productos">
-    <h1>
-        <span class="tituloSeccion">Postres</span>
-        <button class="btnLapiz">
-            <i class="bi bi-pencil-fill"></i>
-        </button>
-    </h1>
-    <hr>
-    <div class="row" id="listaPostres"></div>
+            <h1>
+                <span class="tituloSeccion">Postres</span>
+                <button class="btnLapiz">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+            </h1>
+            <hr>
+            <div class="row" id="listaPostres"></div>
             <div class="col-md-3">
                 <div class="card">
                     <img src="img/postrefresas.jpg" class="card-img-top">
@@ -139,14 +139,14 @@
 
         <!-- TORTAS -->
         <section id="tortas" class="container zona-productos">
-    <h1>
-        <span class="tituloSeccion">Tortas</span>
-        <button class="btnLapiz">
-            <i class="bi bi-pencil-fill"></i>
-        </button>
-    </h1>
-    <hr>
-    <div class="row" id="listaTortas"></div>
+            <h1>
+                <span class="tituloSeccion">Tortas</span>
+                <button class="btnLapiz">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+            </h1>
+            <hr>
+            <div class="row" id="listaTortas"></div>
 
             <div class="col-md-3">
                 <div class="card">
@@ -165,14 +165,14 @@
 
         <!-- OTROS -->
         <section id="otros" class="container zona-productos">
-    <h1>
-        <span class="tituloSeccion">Otros</span>
-        <button class="btnLapiz">
-            <i class="bi bi-pencil-fill"></i>
-        </button>
-    </h1>
-    <hr>
-    <div class="row" id="listaOtros"></div>
+            <h1>
+                <span class="tituloSeccion">Otros</span>
+                <button class="btnLapiz">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+            </h1>
+            <hr>
+            <div class="row" id="listaOtros"></div>
             <article class="col-md-3">
                 <div class="card">
                     <img src="img/deditos.png" class="card-img-top">
@@ -259,6 +259,9 @@
         <i class="bi bi-plus"></i>
     </a>
 
+    <button class="btnAgregar" id="btnNuevaCategoria" style="bottom:100px;">
+        <i class="bi bi-folder-plus"></i>
+    </button>
 </body>
 
 </html>
